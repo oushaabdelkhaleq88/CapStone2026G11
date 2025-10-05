@@ -7,10 +7,10 @@ import Logbooks from './Logbooks'
 import Prototype from './Prototype'
 import TestResults from './TestResults'
 import './index.css'
-
+import { HashRouter } from 'react-router-dom'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/Challenge" element={<Challenge />} />
@@ -18,6 +18,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/Prototype" element={<Prototype />} />
         <Route path="/TestResults" element={<TestResults />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 )
