@@ -9,11 +9,8 @@ export default defineConfig(({ command }) => {
       react(), 
       tailwindcss(),
     ],
-  }
-  
-  // Only set base for production builds
-  if (command === 'build') {
-    config.base = '/CapStone2026G11'
+    base: '/CapStone2026G11',
+    
   }
   
   return config
