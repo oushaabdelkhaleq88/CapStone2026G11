@@ -13,7 +13,7 @@ export default defineConfig(({ command }) => {
   
   // Only set base for production builds
   if (command === 'build') {
-    config.base = '/CapStone2026G11'
+    config.base = '/CapStone2026G11/'
   }
   
   return config
