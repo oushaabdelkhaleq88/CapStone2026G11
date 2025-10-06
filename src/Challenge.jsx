@@ -1,11 +1,56 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from './Layout'
 
 function Challenge() {
+  useEffect(() => {
+    const style = document.createElement('style')
+    style.innerHTML = `
+      @keyframes grayscaleSlide {
+        0%   { background-position: 0% 50%; }
+        100% { background-position: 200% 50%; }
+      }
+
+      body {
+        background: linear-gradient(90deg,
+          #000000,
+          #0a0a0a,
+          #141414,
+          #1e1e1e,
+          #282828,
+          #323232,
+          #3c3c3c,
+          #464646,
+          #505050,
+          #5a5a5a,
+          #646464,
+          #5a5a5a,
+          #505050,
+          #464646,
+          #3c3c3c,
+          #323232,
+          #282828,
+          #1e1e1e,
+          #141414,
+          #0a0a0a,
+          #000000
+        );
+        background-size: 200% 100%;
+        background-repeat: repeat;
+        animation: grayscaleSlide 8s linear infinite;
+        margin: 0;
+      }
+    `
+    document.head.appendChild(style)
+
+    return () => {
+      document.head.removeChild(style)
+    }
+  }, [])
+
   return (
     <Layout>
-      <section className="bg-white py-16 px-6 text-center max-w-5xl mx-auto space-y-8">
-        <h1 className="text-4xl font-bold text-blue-700">
+      <section className="bg-white py-16 px-6 text-center max-w-5xl mx-auto space-y-8 rounded-xl shadow-lg">
+        <h1 className="text-4xl font-bold text-black">
           Capstone Challenge 2025–2026
         </h1>
 

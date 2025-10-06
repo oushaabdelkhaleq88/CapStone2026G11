@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from './Layout'
 
-function Logbooks() {
+function TestResults() {
   return (
     <Layout>
       {/* Your logbook content here */}
@@ -9,4 +9,4 @@ function Logbooks() {
   )
 }
 
-export default Logbooks
+export default TestResults
